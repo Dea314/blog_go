@@ -104,7 +104,7 @@
 }
 /* Tailwind Styles  */
 .prompt_layout {
-  @apply space-y-6 py-8  sm:gap-6;
+  @apply space-y-6 py-8 sm:gap-6;
 }
 
 /* Feed Component */
