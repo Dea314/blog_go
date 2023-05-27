@@ -1,6 +1,5 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import GitHubProvider from "next-auth/providers/github";
 
 import User from "@models/user";
 import { connectToDB } from "@utils/database";
@@ -10,12 +9,6 @@ const handler = NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    }),
-  ],
-  providers: [
-    GitHubProvider({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }),
   ],
   callbacks: {
